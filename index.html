@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Housing Crisis</title>
+  </head>
+  <body>
+          <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="https://www.pricedout.org.uk">
+                <img src="images/P_O_Logo.png" alt="PO Logo" width="30" height="30" class="d-inline-block align-text-top">
+                PricedOut
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Title-->
+      <div class="container" id = "topBox">
+        <h1 class= "display-4">How much has our housing crisis cost you?</h1>
+        <p class="lead">For decades, the UK has failed to build enough affordable, social or market-rate housing, and prioritised the interests of wealthy homeowners over renters and first-time buyers.</p>
+        <p class="text-danger">How much has this cost you? Select the options below to find out.</p>
+    </div>
+    <!-- main forms-->
+    <div class ="container">
+      <h3> Enter  your details here. We don't store or use any of your data.</h3>
+      <form>
+        <div class="mb-3">
+          <label for="myLocation" class="form-label"> What UK local authority would you like to live in? Start typing and the form will auto-complete:</label>
+          <input type="text" class="form-control" id="myLocation" placeholder= "Where would you like to live?">
+        </div>
+        <div class="mb-3">
+          <label for="myHouse" class="form-label">What kind of property would you like to live in?</label>
+          <select class="form-control" id="myHouse" name="myHouse">
+            <option value = "Detached" selected>Detached</option>
+            <option value = "Semi-detached">Semi-detached</option>
+            <option value = "Terraced">Terraced</option>
+            <option value = "Flat">Flat</option>
+          </select>
+        </div>
+      </form>
+      <!-- accordion-->
+      <div class="accordion" id="moreOptions">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button bg-light text-dark btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Want more options? Click here.
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#moreOptions">
+            <div class="accordion-body">
+              <form>
+                <div class="mb-3">
+                  <label for="myRent" class="form-label"> How much do you spend monthly on rent (£)?</label>
+                  <input type="text" class="form-control" id="myRent" placeholder= "1000">
+                </div>
+                <div class="mb-3">
+                  <label for="mySavings" class="form-label"> How much can you save every month towards a deposit (£)?</label>
+                  <input type="text" class="form-control" id="mySavings" placeholder= "300">
+                </div>
+        
+            </div>
+          </div>
+        </div>
+        </div>
+        <br>
+        <!-- Submit button-->
+        <div>
+          <button type="submit" class="btn btn-secondary" id="myBtn">Submit</button>
+        </div>
+    </div>
+    <!-- responses-->
+
+    <div class="container mt-3 pt-3 mx-auto" id="results">
+      <h4>Compared to a similar buyer in 1995, you will pay an extra <span class="text-danger" id = "totalCost"> a lot of money.</span> in housing costs.</h4>
+      <div class="row">
+          <div class="col-md-4" style ="text-align:center">
+              <i class="fas fa-home fa-3x mt-2 mb-2" ></i>
+               <p>The house itself will cost an extra <span class="text-danger" id="houseCost">lots of money</span>, taking into account inflation.</p>
+
+          </div>
+          <div class="col-md-4"style ="text-align:center">
+              <i class="fas fa-piggy-bank fa-3x mt-2 mb-2"></i>
+              <p>It would take <span class = "responsible"> an average earner </span> <span class = "text-danger" id = "numberYears">a long time</span> to save a 15% deposit.</p>  
+
+
+          </div>
+          <div class="col-md-4"style ="text-align:center">
+              <i class="fas fa-bath fa-3x mt-2 mb-2"></i>
+              <p>In that time, <span class = "responsible"> an average earner </span> would pay <span class = "text-danger" id = "rentCost"> a lot of money </span> in rent.</p>
+
+          </div>
+        </div> 
+  </div>
+  <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
